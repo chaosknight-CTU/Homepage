@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(135deg, #f6d242 10%, #ff52e5 100%);
+}
+.header {
+  width: 100%;
+  height: fit-content;
+  padding-top: 30px;
+}
+.header_title,
+.header_sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1024px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.navbar {
+  width: 320px;
+  max-width: 100%;
+  padding: 35px 0;
+}
+
+.navbar ul {
+  width: 100%;
+}
+.navbar ul li {
+  display: block;
+  list-style: none;
+  font-weight: 500;
+  width: 100%;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+  padding: 5px 15px;
+  display: block;
+  height: 100%;
+  position: relative;
+  text-indent: 10px;
+  z-index: 1;
+}
+
+.navbar ul li a:hover {
+  color: gray;
+}
+
+.navbar ul li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  transform: translateX(100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.navbar ul li a:hover::after {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+.content {
+  flex: 1;
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+.content_blog {
+  display: flex;
+  margin-top: 20px;
+}
+.content_describe {
+  margin-left: 40px;
+  text-align: justify;
+}
+
+.content_img {
+  width: 200px;
+  border-radius: 100%;
+}
+
+.sidebar {
+  background: #fff;
+  margin-top: 20px;
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+
+/* menu1 */
+.text-form {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 30px;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 799px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .navbar {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+.text-form label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.text-form.success input {
+  border-color: #2ecc71;
+  visibility: visible;
+}
+
+.text-form.error input {
+  border-color: #e74c3c;
+  visibility: visible;
+}
+
+.text-form input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+.register_form {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+.register_form img {
+  width: 300px;
+}
+.bn53 {
+  background-color: #1569b8;
+  padding: 7px;
+  width: 100px;
+  animation: bn53bounce 4s infinite;
+  cursor: pointer;
+  width: 290px;
+  height: 40px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-top: 15px;
+  border: solid #5283ff;
+}
+
+@keyframes bn53bounce {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1) rotate(-5deg);
+  }
+
+  25% {
+    transform: scale(1) rotate(5deg);
+  }
+
+  30% {
+    transform: scale(1) rotate(-3deg);
+  }
+
+  35% {
+    transform: scale(1) rotate(2deg);
+  }
+
+  40% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+button,
+input {
+  outline: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+}
+td {
+  padding: 5px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.tab {
+  text-align: center;
+  flex: 1;
+  cursor: pointer;
+  border: 1px solid transparent;
+  user-select: none;
+  transition: 0.4s ease;
+}
+
+.tab:hover {
+  background: #00000010;
+}
+
+.tab.active {
+  border-color: #ddd;
+  box-shadow: 0 0px 2px #00000020;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px 0;
+}
+.tab-content.active {
+  display: block;
+}
